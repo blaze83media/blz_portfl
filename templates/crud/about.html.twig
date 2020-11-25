@@ -1,0 +1,61 @@
+{% block stylesheets %}
+<link href="{{ asset('css/about.css') }}" rel="stylesheet"/>
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap')}}" rel="stylesheet">
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inconsolata&family=Work+Sans:wght@100&display=swap')}}" rel="stylesheet">
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Itim&display=swap')}}" rel="stylesheet">
+{% endblock %}
+
+<div class="container">
+    <div class="row" id='about'>
+        <div class="col-12" id='about2'>
+            <h2 id='hrr'> ABOUT </h2>
+            <hr id='hr1' style="">
+        </div>
+    </div>
+
+    <div class="row" id='about2'>
+            
+            
+                
+            <div class="col-md-4 bk" id='shape1'>
+                <h2 class="crt">{{title1}}</h2>
+                <h4 class="p_body"> {{body1}}</h4>            
+            </div>
+            <div class="col-md-4 bk" id='shape2'>   
+                <h2 class="crt">{{title2}}</h2>
+                <h4 class="p_body"> {{body2}}</h4>
+            </div>
+            <div class="col-md-4 bk" id='shape3'>
+                <h2 class="crt">{{title3}}</h2>
+                <h4 class="p_body"> {{body3}} </h4>
+            </div>
+             
+    </div>
+
+
+    <div class="row" id='about3'>
+        <div class="col-md-6 bk2" id='shapeA'>
+            <img src="{{asset('uploads/'~imageName) }}" alt="img!" id="blz_img" />
+            <h2 class="crt" id='pbXX'> {{imageTitle}} </h2>
+            <h4 class="p_body" id='pbX'> {{imageBody}} </h4>
+        </div>
+
+        <div class="col-md-6 bk2" id='shapeB'>
+        
+        {#
+        <div id="barchart_values" style="width: 900px; height: 300px;"></div>
+        #}
+        <canvas id="myChart" width="400" height="400"></canvas>
+        {# The div with id chartContainer is for the BAR chart (https://canvasjs.com/jquery-charts/bar-chart/) #}
+        {# <div id='chartContainer'>  </div> #}
+         
+        </div>
+    
+    </div>
+
+</div>
+
+    {% block javascripts %}
+       <script src="{{ asset('js/techstack_jquery.js') }}"></script>
+       {# <script src="{{ asset('js/aboutjs.js') }}"></script> #}
+    {% endblock %}

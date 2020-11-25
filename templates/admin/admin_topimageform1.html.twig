@@ -1,0 +1,21 @@
+{% block stylesheets %}
+    <link href="{{ asset('css/admin_css/admin_contentmgtcss.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+
+
+
+ 
+<div class="container">
+       <div class="modal-body form1A">
+        <h2>Top Image</h2>
+            {{ form_start(formQ, {'attr': {'id': 'fmA', 'class':'form-inline', 'action': 'contact', 'method': 'POST' }}) }} 
+            {{ form_widget(formQ, {'attr': {'id': 'fmB', 'class':'form-inline'}}  )}} 
+            {{ form_end(formQ) }} 
+            <a href="{{asset('/admin')}}" >
+                <button type="button" class="btn btn-primary form1B"> Return </button>
+            </a>
+        </div>
+</div>     
+ 
+  

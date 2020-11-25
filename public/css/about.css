@@ -1,0 +1,87 @@
+#hrr{font-family: 'Luckiest Guy', cursive;}
+
+#about2{
+	margin-top:2%;
+	text-align:center;
+}
+
+#about3{
+	margin-top:4%;
+	text-align:center;
+}
+
+#about3 img {}
+#pbXX,#pbX{color:#939393;}
+
+.crt{
+     font-size:150%;
+     font-family: 'Dancing Script', cursive;
+     }
+     
+.p_body{font-size:120%;font-family: 'Itim', cursive;}
+
+
+#blz_img{
+	width:100%; 
+	height:70%;
+	filter: grayscale(100%); 
+	border-radius:60px;
+	}
+
+
+#hr1{
+     background-color:black;
+     width:7%;
+     min-height:2px;
+     display: flex;
+     align-items:center;
+}
+
+/*
+#triangleUp{
+	width: 30%;
+	height: 30%;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #056978;
+}
+*/
+
+#shape1{background-color:#A4A4A4}
+#shape2{background-color:#ED97BE}
+#shape3{background-color:#9FE1F0}
+
+#shape1,#shape2,#shape3{
+    
+    border-radius:7px;
+    color:white;
+    margin:0% 5% 0% 7%;
+    max-width:20%;
+    min-height:80%;
+    }
+
+
+@media only screen and (min-width:200px) and (max-width:755px){
+   #shape1,#shape2,#shape3{
+	min-width:25%;
+        max-height:40%;
+        margin:2% 1% 1% 6%;
+	}
+}
+
+         svg rect {
+            fill: gray;
+         }
+         
+         svg text {
+            fill: yellow;
+            font: 12px sans-serif;
+            text-anchor: end;
+         }
+         
+         
+@media only screen and (min-width:300px) and (max-width:567px){
+#shapeB{
+	margin-top:10%;
+	}
+}

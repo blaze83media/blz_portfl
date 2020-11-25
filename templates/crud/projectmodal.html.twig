@@ -1,0 +1,31 @@
+
+                        
+                        
+
+
+
+                        <!-- Modal Header -->
+                        <div class="modal-header md1">
+                            <h4 class="modal-title tp1"> {{ project.Title }} </h4>
+                            <input type="button" class="close" data-dismiss="modal" value="&times"; >
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                        <img src="{{asset('uploads/'~project.ImageName)}}" alt="img!" id="pj1" class="img1" />
+                          <p>  {{ project.Body }} </p>
+                            <a href="{{ asset(project.ProjectGroup) }}" class="btn btn-info prjtmodal" target="_blank" > 
+                                Explore more 
+                            </a>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+
+                            <input type="button" class="btn btn-primary btnmd" data-dismiss="modal" value="Close" >
+                        </div>
+
+
+
+
+ 

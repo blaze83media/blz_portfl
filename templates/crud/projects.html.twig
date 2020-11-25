@@ -1,0 +1,112 @@
+
+
+{% block stylesheets %}
+<link href="{{ asset('css/projects.css') }}" rel="stylesheet"/>
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap')}}" rel="stylesheet">
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inconsolata&family=Work+Sans:wght@100&display=swap')}}" rel="stylesheet">
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Itim&display=swap')}}" rel="stylesheet">
+
+{% endblock %}
+
+<hr>
+
+<div class="container">
+    <div class="row" id='projects'>
+        <div class="col-12" id='projectDIV'> 
+            <h2 id='pjtTXT'> PROJECTS </h2>
+            <hr id='hr11' style="">
+        </div>
+    </div>
+
+    <div class="row">
+      
+        <div class="col-md-3 pjtJs tabs" onclick = "clkk(event,'tt1');"> 
+           <h5 class="" > All Projects </h5>
+        </div>
+      
+
+        <div class="col-md-3 pjtJs tabs"  onclick = "clkk(event,'tt2');">
+            <h5 class="" > JavaScript | JQuery | PHP </h5>
+        </div>
+
+        <div class="col-md-3 pjtJs tabs" onclick = "clkk(event,'tt3');"> 
+            <h5 class="" > React | Twig |Symfony </h5>
+        </div>
+
+        <div class="col-md-3 pjtJs tabs" onclick = "clkk(event,'tt4');" > 
+            <h5 class="" > Vue | Blade | Laravel </h5>
+        </div>
+    </div>
+
+
+    
+    <div class="showPrjt projectPG" id='tt1'>
+            <div class="row">
+
+             {% for project in projects %}
+
+                <div class="col-3  boximg" >
+                    <img src="{{asset('uploads/'~project.ImageName)}}" alt="img!" id="pj1" class="img1" />
+                    <div class="imgc">
+                            <p  id="details"> {{ project.Title }} </p>
+                            <a href="{{ asset('/projectmodal/'~project.id) }}" class="btn btn-info prjtmodal" > 
+                                Learn More 
+                            </a>
+                    </div>
+                </div>
+
+                                                        <!-- The Modal -->
+                <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content bd11">
+
+                        <!-- This modal is run by this jQuery
+                            $(document).ready(function() {
+                            $('.prjtmodal').on('click', function(e){
+                                e.preventDefault();
+                                $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
+                                });
+                            });
+                        -->
+
+                    </div>
+                  </div>
+                </div>
+
+                
+             {% else %}
+               <tr>
+                <td colspan="6">no records found</td>
+               </tr>
+             {% endfor %}      
+
+
+            </div>
+    </div>
+
+
+
+    {{ render(controller(
+        'App\\Controller\\IndexProjects2Controller::index'
+    )) }}   
+      
+
+     {{ render(controller(
+        'App\\Controller\\IndexProjects3Controller::index'
+    )) }} 
+
+
+
+     {{ render(controller(
+        'App\\Controller\\IndexProjects4Controller::index'
+    )) }} 
+
+
+
+</div>
+
+    {% block javascripts %}
+       <script src="{{ asset('js/projectsJS.js') }}">
+
+       </script>
+    {% endblock %}

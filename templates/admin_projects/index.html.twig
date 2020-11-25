@@ -1,0 +1,48 @@
+{{include('header.html.twig')}} 
+{% block stylesheets %}
+    <link href="{{ asset('css/admin_css/admin_about.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+  
+<div class="container jumbotron col-md-10" id="prjtQ">
+  <h3>Projects</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+                <th>ProjectGroup</th>
+                <th>ImageName</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for project in projects %}
+            <tr>
+                <td>{{ project.id }}</td>
+                <td>{{ project.Title }}</td>
+                <td>{{ project.Body }}</td>
+                <td>{{ project.ProjectGroup }}</td>
+                <td>{{ project.ImageName }}</td>
+                <td>
+                    <a href="{{ path('projects_show', {'id': project.id}) }}">show</a>
+                    <a href="{{ path('projects_edit', {'id': project.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('projects_new') }}">Create new</a>
+        <br>
+    <a href="/admin">Admin Page</a>
+
+
+</div>
+
+{{include('footer.html.twig')}} 

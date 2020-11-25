@@ -1,0 +1,21 @@
+{{include('header.html.twig')}} 
+{% block stylesheets %}
+    <link href="{{ asset('css/admin_css/admin_about.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+
+
+{% block body %}
+
+<div class="container jumbotron col-md-8 abt">
+    <h3>Create new About</h3>
+<hr>
+    {{ include('admin_about/_form.html.twig') }}
+
+    <div class="">
+      <a href="{{ path('about_index') }}">back to list</a>
+    </div>
+</div>
+
+{% endblock %}
+{{include('footer.html.twig')}} 

@@ -1,0 +1,103 @@
+.sidenav {
+    height: 100%;
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(82, 140, 158);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #f7f7f7;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #141414;
+}
+
+.main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav */
+    font-size: 28px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.showPrjt {
+    display: none;
+    margin: 5% 5%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 100%;
+    color: black;
+    transition: background-color 1s;
+    transition-timing-function: ease;
+}
+
+.active {
+    color: black;
+    text-shadow: 2px 2px 18px white, 2px 2px 18px white;
+    background-color: gray;
+}
+
+.pjtJs {
+    font-family: 'Architects Daughter', cursive;
+}
+
+.pg {
+    border: 1px solid rgb(57, 67, 70);
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.topimg1 {
+    margin-left: 18%;
+}
+
+.topimg2 {
+    margin-left: 23%;
+}
+
+#capImg {
+    max-width: 10%;
+    max-height: 10%;
+}
+
+.form1A {
+    border: 1px solid rgb(114, 105, 105);
+    border-radius: 8px;
+    margin-left: 10%;
+    margin-right: 20%;
+    align-items: center;
+    text-align: center;
+}
+
+.form1A input {
+    margin: 1%;
+}
+
+.form1A button {
+    margin: 1%;
+}
+
+input {
+    min-width: 40%;
+}

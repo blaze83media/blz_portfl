@@ -1,0 +1,39 @@
+{% block stylesheets %}
+<link href="{{ asset('css/contact.css') }}" rel="stylesheet"/>
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap')}}" rel="stylesheet">
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inconsolata&family=Work+Sans:wght@100&display=swap')}}" rel="stylesheet">
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Itim&display=swap')}}" rel="stylesheet">
+{% endblock %}
+
+
+<div class="container-fluid fm1">
+   <div class="row" id='contact'>
+    
+
+      <div class="col-12 colorbgd">
+          
+           <br>
+            <h2 id='ct1'> CONTACT </h2>
+            <hr id='ct2' style="">
+            <p id="ask1"> Ask a question or work with me ?! </p>
+	      
+                  <div class="" id='fa1'>
+                  {{ form_start(form_var, {'attr': {'id': 'form1', 'class':'form-inline formName', 'action': 'contact', 'method': 'POST' }}) }} 
+                  {{ form_widget(form_var) }} 
+                  {{ form_end(form_var) }} 
+                  </div>     
+
+      </div>
+   </div>
+
+
+
+
+</div>
+
+    {% block javascripts %}
+       <script src="{{ asset('js/techstack_jquery.js') }}">
+       
+       
+       </script>
+    {% endblock %}

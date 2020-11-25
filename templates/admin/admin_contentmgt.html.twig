@@ -1,0 +1,60 @@
+{{include('admin/admin_header.html.twig')}} 
+
+
+{% block stylesheets %}
+<link href="{{ asset('css/admin_css/admin_contentmgtcss.css') }}" rel="stylesheet"/>
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap')}}" rel="stylesheet">
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inconsolata&family=Work+Sans:wght@100&display=swap')}}" rel="stylesheet">
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Itim&display=swap')}}" rel="stylesheet">
+
+<link rel="preconnect" href="{{ asset('https://fonts.gstatic.com')}}">
+<link href="{{ asset('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap')}}" rel="stylesheet">
+
+{% endblock %}
+
+
+<div class="sidenav">
+  <div class="pjtJs" onclick="clkk(event,'tt1');" ><a href="#topimage">Top Image</a> </div>
+  <div class="pjtJs" onclick="clkk(event,'tt2');" id="abt2" > <a href="#about" >About</a> </div>
+  <div class="pjtJs" onclick="clkk(event,'tt3');" > <a href="#projects" >Projects</a> </div>
+  <div class="pjtJs" onclick="clkk(event,'tt4');" > <a href="#contact" >Contact</a> </div>
+</div>
+
+
+<div class="container main showPrjt pg" id="tt1">
+
+  <h2>Top Image</h2>
+      {{ render(controller(
+        'App\\Controller\\AdminForms\\TopImage2Controller::show'
+    )) }}
+</div>
+
+<div class="main showPrjt" id="tt2">
+    <!-- <h2>About</h2> -->
+      {{ render(controller(
+        'App\\Controller\\AboutController::index'
+    )) }}
+</div>
+
+<div class="main showPrjt" id="tt3">
+  <!-- <h2>Projects</h2> -->
+      {{ render(controller(
+        'App\\Controller\\ProjectsController::index'
+    )) }}
+</div>
+
+<div class="main showPrjt" id="tt4">
+  <h2>Contact</h2>
+  <p> 4th Page. Still under contruction</p>
+  <p>Keep checking, cheers!</p>
+</div>
+
+
+
+    {% block javascripts %}
+       <script src="{{ asset('js/adminjs/adminContentJs.js') }}"></script>
+      
+    {% endblock %}
+
+
+{{include('admin/admin_footer.html.twig')}} 

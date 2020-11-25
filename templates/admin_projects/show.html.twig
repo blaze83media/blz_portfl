@@ -1,0 +1,49 @@
+{{include('header.html.twig')}} 
+{% block stylesheets %}
+    <link href="{{ asset('css/admin_css/admin_about.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+
+
+
+
+<div class="container jumbotron col-md-6 abt">
+  
+
+ 
+
+    {% block body %}
+    <h1>Projects</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ project.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ project.Title }}</td>
+            </tr>
+            <tr>
+                <th>Body</th>
+                <td>{{ project.Body }}</td>
+            </tr>
+            <tr>
+                <th>ProjectGroup</th>
+                <td>{{ project.ProjectGroup }}</td>
+            </tr>
+            <tr>
+                <th>ImageName</th>
+                <td>{{ project.ImageName }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('projects_index') }}">back to list</a>
+    <br>
+    <a href="{{ path('projects_edit', {'id': project.id}) }}">edit</a>
+
+    {{ include('admin_projects/_delete_form.html.twig') }}
+   {% endblock %}
+</div>

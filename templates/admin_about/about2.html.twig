@@ -1,0 +1,56 @@
+{{include('header.html.twig')}} 
+{% block stylesheets %}
+    <link href="{{ asset('css/admin_css/admin_about.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+<div class="container jumbotron col-md-12 abt">
+     <h3>About</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title1</th>
+                <th>Body1</th>
+                <th>Title2</th>
+                <th>Body2</th>
+                <th>Title3</th>
+                <th>Body3</th>
+                <th>ImageName</th>
+                <th>ImageTitle</th>
+                <th>ImageBody</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for about in abouts %}
+            <tr>
+                <td>{{ about.id }}</td>
+                <td>{{ about.Title1 }}</td>
+                <td>{{ about.Body1 }}</td>
+                <td>{{ about.Title2 }}</td>
+                <td>{{ about.Body2 }}</td>
+                <td>{{ about.Title3 }}</td>
+                <td>{{ about.Body3 }}</td>
+                <td>{{ about.ImageName }}</td>
+                <td>{{ about.ImageTitle }}</td>
+                <td>{{ about.ImageBody }}</td>
+                <td>
+                    <a href="{{ path('about_show', {'id': about.id}) }}">show</a>
+                    <a href="{{ path('about_edit', {'id': about.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('about_new') }}">Create new</a>
+    <br>
+    <a href="/admin">Admin Page</a>
+
+</div>
+
+{{include('footer.html.twig')}} 

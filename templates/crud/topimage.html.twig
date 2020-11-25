@@ -1,0 +1,27 @@
+       
+    <link href="{{ asset('css/topimage.css') }}" rel="stylesheet"/>
+   
+   <div class = 'imgTxt' id='home'> 
+
+        <img src="{{asset('uploads/'~imageNameCaption)}}" alt="img!" id='topImg'/>
+        <div class='centered topimgtxt'>
+            <p id='p1'>{{caption1}} </p>
+            <br>
+            <p id='p2'> {{caption2}} </p>
+            <br>
+            <p id='p3'> {{caption3}} </p>
+        </div>
+        
+    </div>
+
+
+
+    {% block javascripts %}
+        
+    <script>
+
+
+
+    </script>
+
+    {% endblock %}

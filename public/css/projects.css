@@ -1,0 +1,119 @@
+#pjtTXT {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#projectDIV {
+    margin-top: 5%;
+    text-align: center;
+}
+
+#hr11 {
+    background-color: black;
+    width: 7%;
+    min-height: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.tabs {
+    background-color: #9351AC;
+    max-width: 20%;
+    margin: 0% 2% 0% 3%;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Itim', cursive;
+    text-shadow: 2px 2px 18px black;
+    transition: background-color 1s;
+    transition-timing-function: ease;
+}
+
+.tabs:hover {
+    background-color: #9FE1F0;
+}
+
+.tabs:visited {
+    background-color: #ED97BE;
+}
+
+@media only screen and (min-width:300px) and (max-width:768px) {
+    .tabs h5 {
+        font-size: 15px;
+    }
+    .tabs {
+        max-width: 40%;
+        margin: 1% 2% 1% 6%;
+    }
+}
+
+.showPrjt {
+    display: none;
+    margin: 5% 5%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 100%;
+    color: white;
+    font-family: 'Itim', cursive;
+    text-shadow: 2px 2px 18px black;
+    transition: background-color 1s;
+    transition-timing-function: ease;
+}
+
+.active {
+    color: black;
+    text-shadow: 2px 2px 18px white, 2px 2px 18px white;
+    background-color: gray;
+}
+
+.imgcover {
+    margin-top: ;
+}
+
+.boximg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#details {
+    color: black;
+}
+
+.boximg p {
+    text-align: center;
+    color: white;
+}
+
+.img1 {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50%;
+    max-height: 50%;
+}
+
+@media only screen and (min-width:300px) and (max-width:768px) {
+    .boximg {
+        min-width: 50%;
+    }
+}
+
+@media only screen and (min-width:769px) and (max-width:1100px) {
+    .boximg {
+        min-width: 30%;
+        margin-bottom: 2%;
+    }
+}
+
+.bd11 {
+    background-color: white);
+    color: black;
+}
+
+.md1 {
+    min-width: 80%;
+    min-height: 80%;
+}
+
+.btnmd {
+    max-width: ;
+    float: left;
+}

@@ -1,0 +1,71 @@
+{{include('header.html.twig')}}           {# this adds a header page #}
+
+
+    {% block body %}
+
+    {# the CSS file lives at "public/css/index.css" #}
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet"/>
+
+    {{ render(controller(
+        'App\\Controller\\IndexTopImageController::show'
+    )) }}
+
+{{include('crud/navbar.html.twig')}}
+    
+    {{ render(controller(
+        'App\\Controller\\IndexTopImageController::showmodalimage'
+    )) }}
+
+    {{ render(controller(
+        'App\\Controller\\IndexAboutController::show'
+    )) }}
+
+    {{ render(controller(
+        'App\\Controller\\IndexProjectsController::index'
+    )) }}
+
+{{include('crud/contact.html.twig')}}
+
+
+{{include('crud/foot.html.twig')}}
+
+{% endblock %} 
+
+
+
+{#
+   
+        <a href="{{asset('/test/tb/my-name-to-go')}}" > Name </a> 
+        <a href="{{asset('/testkit/2344')}}" > Last Name </a>
+        <a href="{{asset('/content')}}" > Enter data into db </a> 
+        <a href="{{asset('/showcontent/12')}}" > show db </a> 
+
+         <link href="{{ asset('css/index.css') }}" rel="stylesheet"/>
+    <div class="container"> {% block body %}{% endblock %}  </div>
+
+        <a href="{{path('testL')}}" > Other Name </a>
+   
+        <a href="{{path('testLL', {varArt:'45'} ) }}" > Some Names </a>
+   
+        <a href="{{path('testLLL', {varArt2:'45', varArt3:'478', varArt4:'4526'}) }}" > Their Names </a>
+    
+
+        <a href="{{asset('/content')}}" > Enter data into db </a> 
+    
+       <a href="{{asset('/showcontent/12')}}" > show db </a> 
+    
+        <p> the image lives at "public/images/mz1.jpeg" </p>
+    <img src="{{asset('images/mz1.jpeg') }}" alt="img!" width="300" height="200"/>
+
+    <p> {{ans.1}} </p>
+    <p> {{lnm}} </p>
+    <p> {{fnm}} </p>
+#}
+
+   
+        
+{# this adds a footer page #}
+
+{{include('footer.html.twig')}}           
+
+

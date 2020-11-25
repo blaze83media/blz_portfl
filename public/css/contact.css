@@ -1,0 +1,54 @@
+        #ct1 {
+            font-family: 'Luckiest Guy', cursive;
+        }
+        
+        #ct2 {
+            background-color: #74C3D8;
+            width: 7%;
+            min-height: 2px;
+            display: flex;
+            align-items: center;
+        }
+        
+        #contact {
+            background-color: #131718;
+            color: #74C3D8;
+            top: 5%;
+            text-align: center;
+        }
+        
+        #fa1 label {
+            display: none;
+        }
+        
+        #fa1 input,
+        #fa1 textarea,
+        button {
+            margin: 2%;
+            min-width: 150%;
+        }
+        
+        #fa1 {
+            margin-left: 40%;
+        }
+        
+        @media only screen and (min-width:200px) and (max-width:745px) {
+            #fa1 {
+                margin-left: 17%;
+                margin-right: 30%;
+            }
+        }
+        
+        @media only screen and (min-width:746px) and (max-width:1085px) {
+            #fa1 {
+                margin-left: 31%;
+                margin-right: 10%;
+            }
+        }
+        
+        @media only screen and (min-width:1086px) and (max-width:1700px) {
+            #fa1 {
+                margin-left: 37%;
+                margin-right: 10%;
+            }
+        }

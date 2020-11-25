@@ -1,0 +1,20 @@
+
+{% block stylesheets %}
+    <link href="{{ asset('css/admin_css/admin_contentmgtcss.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+
+
+<div> 
+    <p> Image: <img src= "{{asset('uploads/'~imageNameCaption )}}" id="capImg" />  </p>
+    <p> Caption 1:{{caption1}} </p>
+    <p> Caption 2:{{caption2}} </p>
+    <p> Caption 3:{{caption3}} </p>
+
+    <a href="{{asset('/admin/form1')}}" >
+    <button type="button" class="btn btn-primary"> Edit </button>
+  </a>
+</div>
+
+
+

@@ -1,0 +1,43 @@
+<div class="showPrjt projectPG" id='tt3'>
+            <div class="row">
+
+             {% for project33 in projects3 %}
+
+                <div class="col-3  boximg" >
+                    <img src="{{asset('uploads/'~project33.ImageName)}}" alt="img!" id="pj1" class="img1" />
+                    <div class="imgc">
+                            <p  id="details"> {{ project33.Title }} </p>
+                            <a href="{{ asset('/projectmodal3/'~project33.id) }}" class="btn btn-info prjtmodal" > 
+                                Learn More 
+                            </a>
+                    </div>
+                </div>
+
+                                                        <!-- The Modal -->
+                <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content bd11">
+
+                        <!-- This modal is run by this jQuery
+                            $(document).ready(function() {
+                            $('.prjtmodal').on('click', function(e){
+                                e.preventDefault();
+                                $('#myModal').modal('show').find('.modal-content').load($(this).attr('href'));
+                                });
+                            });
+                        -->
+
+                    </div>
+                  </div>
+                </div>
+
+                
+             {% else %}
+               <tr>
+                <td colspan="6">no records found</td>
+               </tr>
+             {% endfor %}      
+
+
+            </div>
+    </div>
